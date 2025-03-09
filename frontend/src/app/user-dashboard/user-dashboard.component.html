@@ -1,0 +1,37 @@
+<div class="user-dashboard">
+  <button class="logout-button" (click)="logout()">Logout</button>
+  <div class="saved-movies-section">
+    <input 
+    type="text" 
+    [(ngModel)]="searchTerm" 
+    placeholder="Search movies..."
+    class="search-bar"
+  />
+    <h2>Saved Movies</h2>
+    <ul class="movie-list">
+      <li *ngFor="let movie of paginatedMovies()">
+        <div class="movie-info">
+          <strong>{{ movie.Title }} ({{ movie.Year }})</strong>
+          <button (click)="toggleDetails(movie.Title)">Show Details</button>
+        </div>
+      </li>
+      <div class="pagination">
+        <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+        <span>Page {{ currentPage }}</span>
+        <button (click)="nextPage()" [disabled]="currentPage * moviesPerPage >= getFilteredMoviesCount()">Next</button>
+      </div>
+    </ul>
+    
+  </div>
+ 
+  <div class="movie-details-section" *ngIf="selectedMovie">
+    <h2>Movie Details</h2>
+    <div class="details-content">
+      <h3>{{ selectedMovie.Title }} ({{ selectedMovie.Year }})</h3>
+      <img *ngIf="selectedMovie.Poster" [src]="selectedMovie.Poster" alt="Movie Poster">
+      <p><strong>Type:</strong> {{ selectedMovie.Type }}</p>
+      
+      
+    </div>
+  </div>
+</div>

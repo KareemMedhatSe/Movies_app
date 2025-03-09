@@ -1,0 +1,29 @@
+<div class="signup-page">
+    <div class="signup-container">
+      <h2>Signup</h2>
+  
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div class="input-group">
+          <label>Username</label>
+          <input type="text" formControlName="username" placeholder="Enter your username">
+        </div>
+  
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" formControlName="password" placeholder="Enter your password">
+        </div>
+  
+        <div class="input-group">
+          <label>Role</label>
+          <select formControlName="role">
+            <option value="USER">User</option>
+            <option value="ADMIN">Admin</option> 
+          </select>
+        </div>
+  
+        <button type="submit" [disabled]="signupForm.invalid">Signup</button>
+        <p *ngIf="message" class="message">{{ message }}</p>
+      </form>
+    </div>
+  </div>
+  

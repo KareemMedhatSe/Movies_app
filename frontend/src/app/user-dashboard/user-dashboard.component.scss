@@ -1,0 +1,86 @@
+.user-dashboard {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    height: 100vh;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+  
+    .saved-movies-section, .movie-details-section {
+      width: 48%;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .logout-button {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        background-color: #ff4d4d;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .search-input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      
+      .logout-button:hover {
+        background-color: #e60000;
+      }
+      
+    .movie-list {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+  
+        .movie-info {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+  
+        button {
+          background-color: #ff9800;
+          color: white;
+          border: none;
+          padding: 5px 10px;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+      }
+    }
+  
+    .movie-details-section {
+      text-align: center;
+  
+      img {
+        width: 200px;
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+  
+      .details-content {
+        text-align: left;
+      }
+    }
+  }
+  
