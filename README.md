@@ -120,8 +120,9 @@ User Actions
 1. Login as a regular user (Sign up first if needed).
 2. View Saved Movies added by the Admin.
 3. Use the Search Bar to find specific movies.
-4. Click Show Details to see additional movie info.
-5. Logout to end session.
+4. pagination so that the user can go to the next and previous five movies(every page contains 5 movies sp that they can be readable without scrolling down)
+5. Click Show Details to see additional movie info.
+6. Logout to end session.
 ![Image](https://github.com/user-attachments/assets/9f39045c-bc22-48ee-b59c-bc792540165c)
 
 
